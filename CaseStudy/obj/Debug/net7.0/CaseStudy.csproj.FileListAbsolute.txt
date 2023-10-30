@@ -1,0 +1,14 @@
+D:\Training Handson\Basic Solution\CaseStudy\obj\Debug\net7.0\CaseStudy.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training Handson\Basic Solution\CaseStudy\obj\Debug\net7.0\CaseStudy.AssemblyInfoInputs.cache
+D:\Training Handson\Basic Solution\CaseStudy\obj\Debug\net7.0\CaseStudy.AssemblyInfo.cs
+D:\Training Handson\Basic Solution\CaseStudy\obj\Debug\net7.0\CaseStudy.csproj.CoreCompileInputs.cache
+D:\Training Handson\Basic Solution\CaseStudy\bin\Debug\net7.0\CaseStudy.exe
+D:\Training Handson\Basic Solution\CaseStudy\bin\Debug\net7.0\CaseStudy.deps.json
+D:\Training Handson\Basic Solution\CaseStudy\bin\Debug\net7.0\CaseStudy.runtimeconfig.json
+D:\Training Handson\Basic Solution\CaseStudy\bin\Debug\net7.0\CaseStudy.dll
+D:\Training Handson\Basic Solution\CaseStudy\bin\Debug\net7.0\CaseStudy.pdb
+D:\Training Handson\Basic Solution\CaseStudy\obj\Debug\net7.0\CaseStudy.dll
+D:\Training Handson\Basic Solution\CaseStudy\obj\Debug\net7.0\refint\CaseStudy.dll
+D:\Training Handson\Basic Solution\CaseStudy\obj\Debug\net7.0\CaseStudy.pdb
+D:\Training Handson\Basic Solution\CaseStudy\obj\Debug\net7.0\CaseStudy.genruntimeconfig.cache
+D:\Training Handson\Basic Solution\CaseStudy\obj\Debug\net7.0\ref\CaseStudy.dll
