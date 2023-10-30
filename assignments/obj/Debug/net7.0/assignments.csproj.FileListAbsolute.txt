@@ -1,0 +1,14 @@
+D:\Training Handson\Basic Solution\assignments\bin\Debug\net7.0\assignments.exe
+D:\Training Handson\Basic Solution\assignments\bin\Debug\net7.0\assignments.dll
+D:\Training Handson\Basic Solution\assignments\obj\Debug\net7.0\assignments.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training Handson\Basic Solution\assignments\obj\Debug\net7.0\assignments.AssemblyInfoInputs.cache
+D:\Training Handson\Basic Solution\assignments\obj\Debug\net7.0\assignments.AssemblyInfo.cs
+D:\Training Handson\Basic Solution\assignments\obj\Debug\net7.0\assignments.csproj.CoreCompileInputs.cache
+D:\Training Handson\Basic Solution\assignments\obj\Debug\net7.0\assignments.dll
+D:\Training Handson\Basic Solution\assignments\obj\Debug\net7.0\refint\assignments.dll
+D:\Training Handson\Basic Solution\assignments\obj\Debug\net7.0\assignments.pdb
+D:\Training Handson\Basic Solution\assignments\bin\Debug\net7.0\assignments.deps.json
+D:\Training Handson\Basic Solution\assignments\bin\Debug\net7.0\assignments.runtimeconfig.json
+D:\Training Handson\Basic Solution\assignments\bin\Debug\net7.0\assignments.pdb
+D:\Training Handson\Basic Solution\assignments\obj\Debug\net7.0\assignments.genruntimeconfig.cache
+D:\Training Handson\Basic Solution\assignments\obj\Debug\net7.0\ref\assignments.dll
