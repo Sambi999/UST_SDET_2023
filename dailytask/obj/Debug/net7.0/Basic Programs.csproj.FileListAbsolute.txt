@@ -1,0 +1,14 @@
+D:\Training Handson\Basic Solution\Basic Programs\obj\Debug\net7.0\Basic Programs.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training Handson\Basic Solution\Basic Programs\obj\Debug\net7.0\Basic Programs.AssemblyInfoInputs.cache
+D:\Training Handson\Basic Solution\Basic Programs\obj\Debug\net7.0\Basic Programs.AssemblyInfo.cs
+D:\Training Handson\Basic Solution\Basic Programs\obj\Debug\net7.0\Basic Programs.csproj.CoreCompileInputs.cache
+D:\Training Handson\Basic Solution\Basic Programs\bin\Debug\net7.0\Basic Programs.exe
+D:\Training Handson\Basic Solution\Basic Programs\bin\Debug\net7.0\Basic Programs.deps.json
+D:\Training Handson\Basic Solution\Basic Programs\bin\Debug\net7.0\Basic Programs.runtimeconfig.json
+D:\Training Handson\Basic Solution\Basic Programs\bin\Debug\net7.0\Basic Programs.dll
+D:\Training Handson\Basic Solution\Basic Programs\bin\Debug\net7.0\Basic Programs.pdb
+D:\Training Handson\Basic Solution\Basic Programs\obj\Debug\net7.0\Basic Programs.dll
+D:\Training Handson\Basic Solution\Basic Programs\obj\Debug\net7.0\refint\Basic Programs.dll
+D:\Training Handson\Basic Solution\Basic Programs\obj\Debug\net7.0\Basic Programs.pdb
+D:\Training Handson\Basic Solution\Basic Programs\obj\Debug\net7.0\Basic Programs.genruntimeconfig.cache
+D:\Training Handson\Basic Solution\Basic Programs\obj\Debug\net7.0\ref\Basic Programs.dll
