@@ -182,6 +182,72 @@ if (!IsCustAvail)
 using assignments.UserException;
 using assignments;
 
+
+class Program
+{
+    public delegate double DelegateOne(Employees employee);
+    public delegate double DelegateTwo(Employees employeeone);
+
+    public static void Main(String[] args)
+    {
+        DelegateBonus delegateExample = new DelegateBonus();
+        Employees employee = new(1, "Parvathy", 4);
+        Employees employeeone = new(2, "Aiswarya", 5);
+        DelegateOne delegateOne = Employees.BonusCalculation;
+        DelegateTwo delegateTwo = Employees.BonusCalculation;
+        Console.WriteLine($"Employee Name:{employee.EmployeeName}\nPerformance Rating:{employee.PerformanceRange}\nBonus Amount:{delegateOne(employee)}");
+        Console.WriteLine($"Employee Name:{employeeone.EmployeeName}\nPerformance Rating:{employeeone.PerformanceRange}\nBonus Amount:{delegateTwo(employeeone)}");
+
+    }
+}
+
+
+/*
+class Program
+{
+    public delegate string DelegateMessageOne(string msg);
+    public delegate string DelegateMessageTwo(string msg);
+    public static void Main(string[] args)
+    {
+        HotelEvent hotelEvent = new("Dance", "Calicut", "12.00:1-11-2023", 4);
+        DelegateMessageOne delegateMessageOne = HotelEvent.EventRegistration;
+        if (hotelEvent != null)
+        {
+            Console.WriteLine(delegateMessageOne($"Hai {hotelEvent.EventName} is Successfully Registered the event on {hotelEvent.EventDate}"));
+        }
+        else
+        {
+            Console.WriteLine(delegateMessageOne("Unsuccessfully registered"));
+        }
+        HotelEvent hotelEventone = new("Concert", "Ernakulam", "12.0013-10-2023", 6);
+
+        DelegateMessageTwo delegateMessageTwo = HotelEvent.EventRegistration;
+        if (hotelEventone != null)
+        {
+            Console.WriteLine(delegateMessageTwo($"Hai {hotelEventone.EventName} is Successfully Registered the event on {hotelEventone.EventDate}"));
+        }
+        else
+        {
+            Console.WriteLine(delegateMessageTwo("Unsuccessfully registered"));
+        }
+    }
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 Inventory<string> inventory = new Inventory<string>();
 int choice, option;
 do
@@ -284,7 +350,7 @@ do
     option = Convert.ToInt32(Console.ReadLine());
 
 } while (option == 1);
-
+*/
 
 
 
