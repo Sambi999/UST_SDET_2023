@@ -182,7 +182,120 @@ if (!IsCustAvail)
 using assignments.UserException;
 using assignments;
 
+List<TourismDestination> destinations = new List<TourismDestination>()
+{
+    new TourismDestination("Beach Paradise", "Tropical Island", 4, 200),
+    new TourismDestination("Mountain Retreat", "Alpine village", 5, 150),
+    new TourismDestination("City Lights", "Metropolis", 4, 300),
+    new TourismDestination("Historic Town", "Old Europe", 3, 100),
+    new TourismDestination("Nature's Beauty", "National Park", 5, 80),
+};
+var topRatedDestinations = destinations.Where(dest => dest.Rating > 4);
+Console.WriteLine("Top-Rated Tourist Destinations: ");
+foreach (var destination in topRatedDestinations)
+{
+    Console.WriteLine($"Name: {destination.Name}, Location: {destination.Location}, Rating: {destination.Rating}, Price Per Night: ${destination.PricePerNight}");
 
+}
+var sortedByPrice = destinations.OrderBy(dest => dest.PricePerNight);
+Console.WriteLine("\nTourist Destinations Sorted by Price Per Night (Ascending Order):");
+foreach (var destination in sortedByPrice)
+{
+    Console.WriteLine($"Name: {destination.Name}, Location: {destination.Rating}, Price Per Night: ${destination.PricePerNight}");
+
+    
+}
+string targetLocation = "Metropolis";
+var filteredByLocation = destinations.Where(dest => dest.Location == targetLocation);
+Console.WriteLine($"\nTourist Destinations in {targetLocation}:");
+foreach (var destination in filteredByLocation)
+{
+    Console.WriteLine($"Name: {destination.Name}, Location: {destination.Location}, Rating: {destination.Rating}, Price Per Night: ${destination.PricePerNight}");
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+while (true)
+{
+    Console.WriteLine("Menu:");
+    Console.WriteLine("1: Add a Tourism Destination");
+    Console.WriteLine("2: View Destinations Sorted by Rating");
+    Console.WriteLine("3. Exit");
+    Console.WriteLine("Choose an option: ");
+    if (!int.TryParse(Console.ReadLine(), out int choice))
+    {
+        Console.WriteLine("Invalid input. Please enter a number. ");
+        continue;
+    }
+
+
+    switch (choice)
+    {
+        case 1:
+            Console.Write("Enter the name of the destination: ");
+            string name = Console.ReadLine();
+            Console.Write("Enter the country: ");
+            string country = Console.ReadLine();
+            Console.Write("Enter the rating (1 to 5): ");
+            if (!int.TryParse(Console.ReadLine(), out int rating) || rating < 1 || rating > 5)
+            {
+                Console.WriteLine("Invalid rating. Please enter a number between 1 and 5. ");
+                continue;
+            }
+            destinations.Add(new TourismDestination(name, country, rating));
+            break;
+        case 2:
+            List<TourismDestination> sortedDestinations = TourismDestination.SortByRatingDescending(destinations);
+            Console.WriteLine("Tourism Destinations Sorted by Rating (Descending Order):");
+            foreach (var destination in sortedDestinations)
+            {
+                Console.WriteLine($"Name: {destination.Name}, Country: {destination.Country}, Rating: {destination.Rating}");
+
+            }
+            break;
+        case 3:
+            Environment.Exit(0);
+            break;
+        default:
+            Console.WriteLine("Invalid option. Please choose a valid option");
+            break;
+
+    }
+
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 class Program
 {
     public delegate double DelegateOne(Employees employee);
@@ -200,7 +313,7 @@ class Program
 
     }
 }
-
+*/
 
 /*
 class Program
