@@ -1,0 +1,14 @@
+D:\Training Handson\Basic Solution\ThreadsEx\bin\Debug\net7.0\ThreadsEx.exe
+D:\Training Handson\Basic Solution\ThreadsEx\bin\Debug\net7.0\ThreadsEx.deps.json
+D:\Training Handson\Basic Solution\ThreadsEx\bin\Debug\net7.0\ThreadsEx.runtimeconfig.json
+D:\Training Handson\Basic Solution\ThreadsEx\bin\Debug\net7.0\ThreadsEx.dll
+D:\Training Handson\Basic Solution\ThreadsEx\bin\Debug\net7.0\ThreadsEx.pdb
+D:\Training Handson\Basic Solution\ThreadsEx\obj\Debug\net7.0\ThreadsEx.GeneratedMSBuildEditorConfig.editorconfig
+D:\Training Handson\Basic Solution\ThreadsEx\obj\Debug\net7.0\ThreadsEx.AssemblyInfoInputs.cache
+D:\Training Handson\Basic Solution\ThreadsEx\obj\Debug\net7.0\ThreadsEx.AssemblyInfo.cs
+D:\Training Handson\Basic Solution\ThreadsEx\obj\Debug\net7.0\ThreadsEx.csproj.CoreCompileInputs.cache
+D:\Training Handson\Basic Solution\ThreadsEx\obj\Debug\net7.0\ThreadsEx.dll
+D:\Training Handson\Basic Solution\ThreadsEx\obj\Debug\net7.0\refint\ThreadsEx.dll
+D:\Training Handson\Basic Solution\ThreadsEx\obj\Debug\net7.0\ThreadsEx.pdb
+D:\Training Handson\Basic Solution\ThreadsEx\obj\Debug\net7.0\ThreadsEx.genruntimeconfig.cache
+D:\Training Handson\Basic Solution\ThreadsEx\obj\Debug\net7.0\ref\ThreadsEx.dll
