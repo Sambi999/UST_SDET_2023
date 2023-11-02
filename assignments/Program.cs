@@ -182,6 +182,49 @@ if (!IsCustAvail)
 using assignments.UserException;
 using assignments;
 
+//TourismDestinations
+//TourismDestinations tourism1 = new TourismDestinations("Dungeness", "UK", 4, 9875);
+//TourismDestinations tourism2 = new TourismDestinations("Goa", "India", 3, 3500);
+//TourismDestinations tourism3 = new TourismDestinations("Melbourne", "Australia", 3, 7450);
+//TourismDestinations.tourismDestinations.Add(tourism1);
+//TourismDestinations.tourismDestinations.Add(tourism2);
+//TourismDestinations.tourismDestinations.Add(tourism3);
+//TourismDestinations.DisplayTopRated();
+//TourismDestinations.SortedDestination();
+//TourismDestinations.FilterDestination();
+
+//TourPackage
+
+//TourPackage package = new TourPackage(1, "kochi", "12-11-2024", 2000);
+//TourPackage package1 = new TourPackage(2, "Alappuzha", "12-10-2024", 3000);
+//TourPackage package2 = new TourPackage(3, "Trivandrum", "2-2-2023", 2500);
+
+//TourPackage.TourPackages.Add(package1);
+//TourPackage.TourPackages.Add(package2);
+//TourPackage.TourPackages.Add(package);
+
+
+//Thread thread = new Thread(TourPackage.HotelReservation);
+
+//Thread thread1 = new Thread(TourPackage.HotelReservation);
+
+//thread1.Start();
+//thread1.Join();
+//thread.Start();
+
+//Hotel
+
+
+Hotel hotel = new Hotel("name", 4, "gfd", "adfgas", 45);
+Hotel hotel1 = new Hotel("name2", 6, "kju", "adfgas", 45);
+Hotel hotel2 = new Hotel("name3", 17, "asr", "adfgas", 45);
+
+await hotel.HotelBookingig(6, hotel);
+await hotel1.HotelBookingig(5, hotel1);
+await hotel2.HotelBookingig(5, hotel2);
+
+
+/*
 List<TourismDestination> destinations = new List<TourismDestination>()
 {
     new TourismDestination("Beach Paradise", "Tropical Island", 4, 200),
@@ -213,7 +256,7 @@ foreach (var destination in filteredByLocation)
     Console.WriteLine($"Name: {destination.Name}, Location: {destination.Location}, Rating: {destination.Rating}, Price Per Night: ${destination.PricePerNight}");
 
 }
-
+*/
 
 
 
