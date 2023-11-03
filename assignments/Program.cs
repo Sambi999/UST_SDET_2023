@@ -182,6 +182,37 @@ if (!IsCustAvail)
 using assignments.UserException;
 using assignments;
 
+//Todo
+//TaskItem taskItem = new TaskItem(1, "Maths", "Completed");
+//TaskItem taskItem1 = new TaskItem(2, "Science", "Pending");
+
+//TaskItem.toDoList.Add(taskItem);
+//TaskItem.AddTodo(taskItem);
+//TaskItem.AddTodo(taskItem1);
+//TaskItem.updateList(2, "Completed");
+//TaskItem.Display("Completed");
+//TaskItem.Remove(1);
+
+//FamilyMember
+FamilyMember grandparent = new FamilyMember("Grandparent", 80);
+FamilyMember parent1 = new FamilyMember("Parent 1", 47);
+FamilyMember parent2 = new FamilyMember("Parent 2", 42);
+FamilyMember child1 = new FamilyMember("Child 1", 17);
+FamilyMember child2 = new FamilyMember("Child 2", 10);
+
+grandparent.AddChild(parent1);
+grandparent.AddChild(parent2);
+parent1.AddChild(child1);
+parent2.AddChild(child2);
+
+FamilyTree familyTree = new FamilyTree(grandparent);
+familyTree.DisplayFamilyTree();
+
+
+
+
+
+
 //TourismDestinations
 //TourismDestinations tourism1 = new TourismDestinations("Dungeness", "UK", 4, 9875);
 //TourismDestinations tourism2 = new TourismDestinations("Goa", "India", 3, 3500);
@@ -215,13 +246,13 @@ using assignments;
 //Hotel
 
 
-Hotel hotel = new Hotel("name", 4, "gfd", "adfgas", 45);
-Hotel hotel1 = new Hotel("name2", 6, "kju", "adfgas", 45);
-Hotel hotel2 = new Hotel("name3", 17, "asr", "adfgas", 45);
+//Hotel hotel = new Hotel("name", 4, "gfd", "adfgas", 45);
+//Hotel hotel1 = new Hotel("name2", 6, "kju", "adfgas", 45);
+//Hotel hotel2 = new Hotel("name3", 17, "asr", "adfgas", 45);
 
-await hotel.HotelBookingig(6, hotel);
-await hotel1.HotelBookingig(5, hotel1);
-await hotel2.HotelBookingig(5, hotel2);
+//await hotel.HotelBookingig(6, hotel);
+//await hotel1.HotelBookingig(5, hotel1);
+//await hotel2.HotelBookingig(5, hotel2);
 
 
 /*
