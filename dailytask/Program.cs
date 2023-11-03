@@ -55,6 +55,303 @@ using Basic_Programs;
 
 using System;
 
+//Linear Search;
+
+
+
+class LinearSearch
+{
+    public static int Search(int[] array, int target)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] == target)
+            {
+                return i; // Element found at index i
+            }
+        }
+        return -1; // Element not found
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        int[] data = { 10, 25, 7, 42, 15, 30, 8, 50, 5 };
+
+        int target = 42;
+        int result = LinearSearch.Search(data, target);
+
+        if (result != -1)
+        {
+            Console.WriteLine($"Element {target} found at index {result}.");
+        }
+        else
+        {
+            Console.WriteLine($"Element {target} not found in the array.");
+        }
+    }
+}
+
+/*
+Binary Search
+
+using System;
+
+class BinarySearch
+{
+    public static int Search(int[] arr, int target)
+    {
+        int left = 0;
+        int right = arr.Length - 1;
+
+        while (left <= right)
+        {
+            int mid = left + (right - left) / 2;
+
+            if (arr[mid] == target)
+            {
+                return mid; // Return the index of the target element if found
+            }
+
+            if (arr[mid] < target)
+            {
+                left = mid + 1;
+            }
+            else
+            {
+                right = mid - 1;
+            }
+        }
+
+        return -1; // Return -1 to indicate that the target element was not found
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int target = 6;
+
+        int result = BinarySearch.Search(arr, target);
+
+        if (result != -1)
+        {
+            Console.WriteLine($"Element {target} found at index {result}");
+        }
+        else
+        {
+            Console.WriteLine($"Element {target} not found in the array");
+        }
+    }
+}
+
+===========================
+
+Bubble sort
+
+using System;
+
+class BubbleSort
+{
+    public static void Sort(int[] arr)
+    {
+        int n = arr.Length;
+        for (int i = 0; i < n - 1; i++)
+        {
+            for (int j = 0; j < n - i - 1; j++)
+            {
+                if (arr[j] > arr[j + 1])
+                {
+                    // Swap arr[j] and arr[j + 1]
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 5, 1, 4, 2, 8 };
+        
+        Console.WriteLine("Original Array:");
+        PrintArray(arr);
+
+        BubbleSort.Sort(arr);
+
+        Console.WriteLine("Sorted Array:");
+        PrintArray(arr);
+    }
+
+    static void PrintArray(int[] arr)
+    {
+        foreach (var num in arr)
+        {
+            Console.Write(num + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+=========================
+
+Insertion sort
+
+using System;
+
+class InsertionSort
+{
+    public static void Sort(int[] arr)
+    {
+        int n = arr.Length;
+        for (int i = 1; i < n; i++)
+        {
+            int key = arr[i];
+            int j = i - 1;
+
+            while (j >= 0 && arr[j] > key)
+            {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+
+            arr[j + 1] = key;
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 5, 1, 4, 2, 8 };
+        
+        Console.WriteLine("Original Array:");
+        PrintArray(arr);
+
+        InsertionSort.Sort(arr);
+
+        Console.WriteLine("Sorted Array:");
+        PrintArray(arr);
+    }
+
+    static void PrintArray(int[] arr)
+    {
+        foreach (var num in arr)
+        {
+            Console.Write(num + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+=====================
+
+Merge sort
+
+using System;
+
+class MergeSort
+{
+    public static void Sort(int[] arr)
+    {
+        int n = arr.Length;
+        if (n > 1)
+        {
+            int mid = n / 2;
+            int[] left = new int[mid];
+            int[] right = new int[n - mid];
+
+            for (int i = 0; i < mid; i++)
+            {
+                left[i] = arr[i];
+            }
+
+            for (int i = mid; i < n; i++)
+            {
+                right[i - mid] = arr[i];
+            }
+
+            Sort(left);
+            Sort(right);
+            Merge(arr, left, right);
+        }
+    }
+
+    private static void Merge(int[] arr, int[] left, int[] right)
+    {
+        int nL = left.Length;
+        int nR = right.Length;
+        int i = 0, j = 0, k = 0;
+
+        while (i < nL && j < nR)
+        {
+            if (left[i] <= right[j])
+            {
+                arr[k] = left[i];
+                i++;
+            }
+            else
+            {
+                arr[k] = right[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i < nL)
+        {
+            arr[k] = left[i];
+            i++;
+            k++;
+        }
+
+        while (j < nR)
+        {
+            arr[k] = right[j];
+            j++;
+            k++;
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        int[] arr = { 38, 27, 43, 3, 9, 82, 10 };
+
+        Console.WriteLine("Original Array:");
+        PrintArray(arr);
+
+        MergeSort.Sort(arr);
+
+        Console.WriteLine("Sorted Array:");
+        PrintArray(arr);
+    }
+
+    static void PrintArray(int[] arr)
+    {
+        foreach (var num in arr)
+        {
+            Console.Write(num + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+
+
+
+
 //stack
 class CustomStack<T>
 {
