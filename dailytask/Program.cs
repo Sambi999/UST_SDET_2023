@@ -52,6 +52,559 @@ switch (x)
 //driver
 using Basic_Programs;
 
+
+using System;
+
+//stack
+class CustomStack<T>
+{
+    private T[] stackArray;
+    private int top;
+    private int maxSize;
+
+    public CustomStack(int size)
+    {
+        maxSize = size;
+        stackArray = new T[maxSize];
+        top = -1;
+    }
+
+    public bool IsEmpty()
+    {
+        return top == -1;
+    }
+
+    public bool IsFull()
+    {
+        return top == maxSize - 1;
+    }
+
+    public void Push(T item)
+    {
+        if (IsFull())
+        {
+            Console.WriteLine("Stack is full. Cannot push.");
+            return;
+        }
+        stackArray[++top] = item;
+        Console.WriteLine($"Pushed: {item}");
+    }
+
+    public T Pop()
+    {
+        if (IsEmpty())
+        {
+            Console.WriteLine("Stack is empty. Cannot pop.");
+            return default(T);
+        }
+        T poppedItem = stackArray[top--];
+        Console.WriteLine($"Popped: {poppedItem}");
+        return poppedItem;
+    }
+
+    public T Peek()
+    {
+        if (IsEmpty())
+        {
+            Console.WriteLine("Stack is empty. Cannot peek.");
+            return default(T);
+        }
+        return stackArray[top];
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        CustomStack<int> stack = new CustomStack<int>(5);
+
+        stack.Push(1);
+        stack.Push(2);
+        stack.Push(3);
+
+        var topItem = stack.Peek();
+        Console.WriteLine($"Top item: {topItem}");
+
+        stack.Pop();
+        stack.Pop();
+        stack.Pop();
+        stack.Pop(); // Trying to pop from an empty stack
+
+        stack.Push(4);
+    }
+}
+
+
+/*
+queue
+
+using System;
+
+class CustomQueue<T>
+{
+    private T[] queueArray;
+    private int front;
+    private int rear;
+    private int maxSize;
+
+    public CustomQueue(int size)
+    {
+        maxSize = size;
+        queueArray = new T[maxSize];
+        front = -1;
+        rear = -1;
+    }
+
+    public bool IsEmpty()
+    {
+        return front == -1;
+    }
+
+    public bool IsFull()
+    {
+        return (rear == maxSize - 1 && front == 0) || (rear + 1 == front);
+    }
+
+    public void Enqueue(T item)
+    {
+        if (IsFull())
+        {
+            Console.WriteLine("Queue is full. Cannot enqueue.");
+            return;
+        }
+        if (rear == maxSize - 1)
+        {
+            rear = 0;
+        }
+        else
+        {
+            rear++;
+        }
+        queueArray[rear] = item;
+
+        if (front == -1)
+        {
+            front = 0;
+        }
+        Console.WriteLine($"Enqueued: {item}");
+    }
+
+    public T Dequeue()
+    {
+        if (IsEmpty())
+        {
+            Console.WriteLine("Queue is empty. Cannot dequeue.");
+            return default(T);
+        }
+
+        T dequeuedItem = queueArray[front];
+
+        if (front == rear)
+        {
+            front = rear = -1;
+        }
+        else if (front == maxSize - 1)
+        {
+            front = 0;
+        }
+        else
+        {
+            front++;
+        }
+        Console.WriteLine($"Dequeued: {dequeuedItem}");
+        return dequeuedItem;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        CustomQueue<int> queue = new CustomQueue<int>(5);
+
+        queue.Enqueue(1);
+        queue.Enqueue(2);
+        queue.Enqueue(3);
+
+        queue.Dequeue();
+        queue.Dequeue();
+        queue.Dequeue();
+        queue.Dequeue(); // Trying to dequeue from an empty queue
+
+        queue.Enqueue(4);
+        queue.Enqueue(5);
+    }
+}
+
+=====================================
+
+LL
+
+using System;
+
+class Node<T>
+{
+    public T Data { get; set; }
+    public Node<T> Next { get; set; }
+
+    public Node(T data)
+    {
+        Data = data;
+        Next = null;
+    }
+}
+
+class CustomLinkedList<T>
+{
+    private Node<T> head;
+
+    public CustomLinkedList()
+    {
+        head = null;
+    }
+
+    public bool IsEmpty()
+    {
+        return head == null;
+    }
+
+    public void AddNode(T data)
+    {
+        var newNode = new Node<T>(data);
+        if (head == null)
+        {
+            head = newNode;
+        }
+        else
+        {
+            var current = head;
+            while (current.Next != null)
+            {
+                current = current.Next;
+            }
+            current.Next = newNode;
+        }
+        Console.WriteLine($"Added: {data}");
+    }
+
+    public bool RemoveNode(T data)
+    {
+        if (IsEmpty())
+        {
+            Console.WriteLine("List is empty. Cannot remove.");
+            return false;
+        }
+
+        if (head.Data.Equals(data))
+        {
+            head = head.Next;
+            Console.WriteLine($"Removed: {data}");
+            return true;
+        }
+
+        var current = head;
+        while (current.Next != null)
+        {
+            if (current.Next.Data.Equals(data))
+            {
+                current.Next = current.Next.Next;
+                Console.WriteLine($"Removed: {data}");
+                return true;
+            }
+            current = current.Next;
+        }
+        Console.WriteLine($"Data not found: {data}");
+        return false;
+    }
+
+    public void DisplayList()
+    {
+        if (IsEmpty())
+        {
+            Console.WriteLine("List is empty.");
+            return;
+        }
+
+        var current = head;
+        Console.Write("List: ");
+        while (current != null)
+        {
+            Console.Write(current.Data + " ");
+            current = current.Next;
+        }
+        Console.WriteLine();
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        CustomLinkedList<int> linkedList = new CustomLinkedList<int>();
+
+        linkedList.AddNode(1);
+        linkedList.AddNode(2);
+        linkedList.AddNode(3);
+
+        linkedList.RemoveNode(2);
+        linkedList.RemoveNode(4); // Trying to remove a non-existent node
+
+        linkedList.DisplayList();
+    }
+}
+
+=======================
+
+BT
+
+using System;
+
+class Node<T>
+{
+    public T Data { get; set; }
+    public Node<T> Left { get; set; }
+    public Node<T> Right { get; set; }
+
+    public Node(T data)
+    {
+        Data = data;
+        Left = null;
+        Right = null;
+    }
+}
+
+class CustomBinaryTree<T> where T : IComparable<T>
+{
+    private Node<T> root;
+
+    public CustomBinaryTree()
+    {
+        root = null;
+    }
+
+    public void Insert(T data)
+    {
+        root = InsertNode(root, data);
+        Console.WriteLine($"Inserted: {data}");
+    }
+
+    private Node<T> InsertNode(Node<T> node, T data)
+    {
+        if (node == null)
+        {
+            return new Node<T>(data);
+        }
+
+        if (data.CompareTo(node.Data) < 0)
+        {
+            node.Left = InsertNode(node.Left, data);
+        }
+        else if (data.CompareTo(node.Data) > 0)
+        {
+            node.Right = InsertNode(node.Right, data);
+        }
+
+        return node;
+    }
+
+    public void InorderTraversal()
+    {
+        Console.Write("Inorder Traversal: ");
+        Inorder(root);
+        Console.WriteLine();
+    }
+
+    private void Inorder(Node<T> node)
+    {
+        if (node != null)
+        {
+            Inorder(node.Left);
+            Console.Write(node.Data + " ");
+            Inorder(node.Right);
+        }
+    }
+
+    public bool Search(T data)
+    {
+        return SearchNode(root, data);
+    }
+
+    private bool SearchNode(Node<T> node, T data)
+    {
+        if (node == null)
+        {
+            return false;
+        }
+
+        if (data.CompareTo(node.Data) == 0)
+        {
+            return true;
+        }
+
+        if (data.CompareTo(node.Data) < 0)
+        {
+            return SearchNode(node.Left, data);
+        }
+
+        return SearchNode(node.Right, data);
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        CustomBinaryTree<int> binaryTree = new CustomBinaryTree<int>();
+
+        binaryTree.Insert(10);
+        binaryTree.Insert(5);
+        binaryTree.Insert(15);
+        binaryTree.Insert(3);
+
+        binaryTree.InorderTraversal();
+
+        bool found = binaryTree.Search(15);
+        Console.WriteLine("Search for 15: " + found);
+
+        found = binaryTree.Search(7);
+        Console.WriteLine("Search for 7: " + found);
+    }
+}
+
+=====================
+
+Traversal
+
+using System;
+
+class Node
+{
+    public int Data { get; set; }
+    public Node Left { get; set; }
+    public Node Right { get; set; }
+
+    public Node(int data)
+    {
+        Data = data;
+        Left = null;
+        Right = null;
+    }
+}
+
+class BinaryTree
+{
+    public Node Root { get; private set; }
+
+    public BinaryTree()
+    {
+        Root = null;
+    }
+
+    public void Insert(int data)
+    {
+        Root = InsertRec(Root, data);
+    }
+
+    private Node InsertRec(Node root, int data)
+    {
+        if (root == null)
+        {
+            root = new Node(data);
+            return root;
+        }
+
+        if (data < root.Data)
+        {
+            root.Left = InsertRec(root.Left, data);
+        }
+        else if (data > root.Data)
+        {
+            root.Right = InsertRec(root.Right, data);
+        }
+
+        return root;
+    }
+
+    public void InorderTraversal()
+    {
+        Console.Write("In-order Traversal: ");
+        InorderRec(Root);
+        Console.WriteLine();
+    }
+
+    private void InorderRec(Node root)
+    {
+        if (root != null)
+        {
+            InorderRec(root.Left);
+            Console.Write(root.Data + " ");
+            InorderRec(root.Right);
+        }
+    }
+
+    public void PreorderTraversal()
+    {
+        Console.Write("Pre-order Traversal: ");
+        PreorderRec(Root);
+        Console.WriteLine();
+    }
+
+    private void PreorderRec(Node root)
+    {
+        if (root != null)
+        {
+            Console.Write(root.Data + " ");
+            PreorderRec(root.Left);
+            PreorderRec(root.Right);
+        }
+    }
+
+    public void PostorderTraversal()
+    {
+        Console.Write("Post-order Traversal: ");
+        PostorderRec(Root);
+        Console.WriteLine();
+    }
+
+    private void PostorderRec(Node root)
+    {
+        if (root != null)
+        {
+            PostorderRec(root.Left);
+            PostorderRec(root.Right);
+            Console.Write(root.Data + " ");
+        }
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        BinaryTree binaryTree = new BinaryTree();
+
+        binaryTree.Insert(10);
+        binaryTree.Insert(5);
+        binaryTree.Insert(15);
+        binaryTree.Insert(3);
+        binaryTree.Insert(7);
+
+        binaryTree.InorderTraversal();
+        binaryTree.PreorderTraversal();
+        binaryTree.PostorderTraversal();
+    }
+}
+
+
+
+
+
+
+
+
+
+/*
 public delegate void Delegate1(string message);
 public delegate void Delegate2(int n1, int n2);
 public delegate int Delegate3(int n1, int n2);
@@ -94,17 +647,19 @@ dobj1.Invoke();
         dobj1("Hello who r u ?");
     }
     */
+    /*
     public static void Main(string[] args)
     {
         //DelegateEx delegateEx = new();
         Delegate1 dobj1 = DelegateEx.MethodA;
         dobj1("Hello who r u ?");
-
+    */
         /*
         DelegateEx delegateEx = new();
         Delegate2 dobj2 = delegateEx.Add;
         dobj2(10, 20);
         */
+        /*
         DelegateEx delegateEx = new();
         Delegate2 dobj2 = delegateEx.Add;
         //dobj2(10, 20);
@@ -120,8 +675,7 @@ dobj1.Invoke();
 
     }
 }
-
-
+*/
 
 
 
