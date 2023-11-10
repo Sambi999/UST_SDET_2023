@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "OhT+UQWNdetWqILIxepKJ2vZ3F2leeEyoHFgGP9vVZRkTiGX1Rr6W4rxifB3rTyI69eDf2A5KEeEeJSY8M0sKQ==",
+  "success": true,
+  "projectFilePath": "D:\\Training Handson\\Basic Solution\\TestProj1\\TestProj1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\nunit\\3.14.0\\nunit.3.14.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\nunit3testadapter\\4.5.0\\nunit3testadapter.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
